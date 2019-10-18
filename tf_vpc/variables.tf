@@ -13,4 +13,7 @@ variable "availability_zones" {
   type        = "list"
 }
 
+variable "dm_pub_subnets" {
+  type = "list"
+}
 
