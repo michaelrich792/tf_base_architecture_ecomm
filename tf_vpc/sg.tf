@@ -52,14 +52,15 @@ resource "aws_security_group_rule" "dm_pri_8080_ingress_res" {
   cidr_blocks       = ["10.20.0.0/24", "10.20.1.0/24", "10.20.2.0/24"]
   security_group_id = "${aws_security_group.dm_default_8080_sg_res.id}"
 }
-resource "aws_security_group_rule" "dm_pri_ssh_ingress_res" {
-  type              = "ingress"
-  to_port           = "22"
-  from_port         = "22"
-  protocol          = "tcp"
-  cidr_blocks       = ["10.20.0.0/24", "10.20.1.0/24", "10.20.2.0/24"]
-  security_group_id = "${aws_security_group.dm_default_8080_sg_res.id}"
-}
+
+#resource "aws_security_group_rule" "dm_pri_ssh_ingress_res" {
+#  type              = "ingress"
+#  to_port           = "22"
+#  from_port         = "22"
+#  protocol          = "tcp"
+#  cidr_blocks       = ["10.20.0.0/24", "10.20.1.0/24", "10.20.2.0/24"]
+#  security_group_id = "${aws_security_group.dm_default_8080_sg_res.id}"
+#}
 
 resource "aws_security_group_rule" "dm_pri_sg_egress_res" {
   type              = "egress"
